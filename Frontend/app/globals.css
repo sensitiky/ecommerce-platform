@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 95%; /* Light grayish blue */
+    --foreground: 210 15% 20%; /* Dark grayish blue */
+
+    --card: 210 20% 95%; /* Light grayish blue */
+    --card-foreground: 210 15% 20%; /* Dark grayish blue */
+
+    --popover: 210 20% 95%; /* Light grayish blue */
+    --popover-foreground: 210 15% 20%; /* Dark grayish blue */
+
+    --primary: 210 50% 40%; /* Moderate blue */
+    --primary-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --secondary: 210 30% 70%; /* Soft blue */
+    --secondary-foreground: 210 50% 40%; /* Moderate blue */
+
+    --muted: 210 30% 70%; /* Soft blue */
+    --muted-foreground: 210 15% 50%; /* Grayish blue */
+
+    --accent: 210 30% 70%; /* Soft blue */
+    --accent-foreground: 210 50% 40%; /* Moderate blue */
+
+    --destructive: 0 60% 50%; /* Soft red */
+    --destructive-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --border: 210 20% 85%; /* Light grayish blue */
+    --input: 210 20% 85%; /* Light grayish blue */
+    --ring: 210 15% 20%; /* Dark grayish blue */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 15% 15%; /* Very dark grayish blue */
+    --foreground: 210 20% 95%; /* Light grayish blue */
+
+    --card: 210 15% 20%; /* Dark grayish blue */
+    --card-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --popover: 210 15% 20%; /* Dark grayish blue */
+    --popover-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --primary: 210 20% 95%; /* Light grayish blue */
+    --primary-foreground: 210 50% 40%; /* Moderate blue */
+
+    --secondary: 210 30% 40%; /* Dark soft blue */
+    --secondary-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --muted: 210 30% 40%; /* Dark soft blue */
+    --muted-foreground: 210 15% 50%; /* Grayish blue */
+
+    --accent: 210 30% 40%; /* Dark soft blue */
+    --accent-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --destructive: 0 50% 40%; /* Dark soft red */
+    --destructive-foreground: 210 20% 95%; /* Light grayish blue */
+
+    --border: 210 30% 40%; /* Dark soft blue */
+    --input: 210 30% 40%; /* Dark soft blue */
+    --ring: 210 15% 20%; /* Dark grayish blue */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
