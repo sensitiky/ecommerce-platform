@@ -6,8 +6,8 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
 } from 'typeorm';
-import { User } from '@//models/user';
-import { CartItem } from '@//models/cartItem';
+import { User } from '@src/models/user';
+import { CartItem } from '@src/models/cartItem';
 
 @Entity()
 export class Cart {

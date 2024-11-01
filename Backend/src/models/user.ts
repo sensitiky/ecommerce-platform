@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { Product } from '@//models/product';
+import { Product } from './product';
 import { Cart } from './cart';
 import { Order } from './order';
 import { Review } from './review';

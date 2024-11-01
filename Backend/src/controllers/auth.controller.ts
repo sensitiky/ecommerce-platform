@@ -8,10 +8,10 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { AuthService } from '@//services/auth.service';
-import { User } from '../models/user';
-import { LoginDto } from '../dto/login.dto';
-import { RegisterDto } from '../dto/register.dto';
+import { AuthService } from '@src/services/auth.service';
+import { User } from '@src/models/user';
+import { LoginDto } from '@src/dto/login.dto';
+import { RegisterDto } from '@src/dto/register.dto';
 import { Request } from 'express';
 
 @Controller('/auth')

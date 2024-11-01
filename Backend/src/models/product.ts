@@ -7,8 +7,8 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { User } from '@//models/user';
-import { Category } from '@//models/category';
+import { User } from './user';
+import { Category } from './category';
 import { Review } from './review';
 
 @Entity()

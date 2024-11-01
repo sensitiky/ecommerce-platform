@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { User } from '@//models/user';
-import { Product } from '../models/product';
-import { Cart } from '../models/cart';
-import { CartItem } from '../models/cartItem';
-import { Order } from '../models/order';
-import { OrderItem } from '../models/orderItem';
-import { Review } from '../models/review';
-import { Category } from '../models/category';
+import { User } from '@src/models/user';
+import { Product } from '@src/models/product';
+import { Cart } from '@src/models/cart';
+import { CartItem } from '@src/models/cartItem';
+import { Order } from '@src/models/order';
+import { OrderItem } from '@src/models/orderItem';
+import { Review } from '@src/models/review';
+import { Category } from '@src/models/category';
 
 @Module({
   imports: [

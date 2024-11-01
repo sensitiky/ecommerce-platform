@@ -1,10 +1,10 @@
 import * as bcrypt from 'bcrypt';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { User } from '../models/user';
+import { User } from '@src/models/user';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { JwtService } from '@nestjs/jwt';
-import { RegisterDto } from '../dto/register.dto';
+import { RegisterDto } from '@src/dto/register.dto';
 @Injectable()
 export class AuthService {
   constructor(
@@ -37,7 +37,7 @@ export class AuthService {
       where: { email },
     });
     if (!user) {
-      throw new HttpException('User not found', HttpStatus.UNAUTHORIZED);
+      throw new HttpException('User not found', HttpStatus.NOT_FOUND);
     }
     if (!password || !user.password) {
       throw new HttpException('Invalid credentials', HttpStatus.UNAUTHORIZED);
@@ -57,7 +57,7 @@ export class AuthService {
       where: { id },
     });
     if (!updatedUser) {
-      throw new Error('User not found');
+      throw new HttpException('User not found', HttpStatus.NOT_FOUND);
     }
 
     updatedUser.username = user.username;
