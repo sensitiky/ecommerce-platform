@@ -12,7 +12,7 @@ import { JwtModule } from '@nestjs/jwt';
     DatabaseModule,
     JwtModule.register({
       global: true,
-      secret: '12345',
+      secret: process.env.SECRET_JWT,
       signOptions: { expiresIn: '300s' },
     }),
   ],
